@@ -64,10 +64,10 @@ def print_help():
     print("Available commands:")
     print("help exit table")
 
-def show_table():
+def show_table(team_list):
     position = 1
     teams_table = []
-    for team in teams:
+    for team in team_list:
         teams_table.append([
             position, team["name"], 0, 0, 0, 0, 0, 0, 0
         ])
@@ -81,6 +81,6 @@ while quit != True:
     elif command == "exit":
         quit = True
     elif command == "table":
-        show_table()
+        show_table(teams)
     else:
         print_help()
